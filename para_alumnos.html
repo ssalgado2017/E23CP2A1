@@ -113,6 +113,28 @@
 
 <script>
 	// Agregar las instrucciones JS para resolver el ejercicio aquí.
+	$("#boton").click(function(event) {
+		var campo = $("#camposelector");
+		if (campo.val() ==""){
+			alert("Debes seleccionar un elemento");
+		} else {
+			var valor = campo.val();
+			var obj = eval(valor);
+			//if (obj != undefined) {
+			obj.fadeOut("slow");
+			obj.fadeIn("slow");
+			//} else {
+			//	campo.val("");
+			//}
+			console.log(obj.length);
+			$("div.historial").append("<p>"+valor+"</p>");
+			$("div.seleccionados").append("<p>"+obj.length+"</p>");
+
+		}
+	});
+
+
+
 </script>
 
 </body>
